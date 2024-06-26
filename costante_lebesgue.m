@@ -1,4 +1,9 @@
 function [Lambda_n] = costante_lebesgue(x, a, b)
+% [Lambda_n] = costante_lebesgue(x, a, b)
+% 
+% Input: 
+% -> x: lista dei nodi dell'interpolazione
+% -> a,b: estremi intervallo
 
 xx = linspace(a, b, 1000);
 n = length(x)-1;

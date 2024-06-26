@@ -1,6 +1,9 @@
-function [cons] = cons_ms(a, b)
-%a: lista dei coef di Aj a partendo da A0
-%b: lista dei coef di Bj a partendo da B-1
+function [cons] = ordine_multistep(a, b)
+% [cons] = ordine_multistep(a, b)
+%
+% Input:
+% -> a: lista dei coef di Aj a partendo da A0
+% -> b: lista dei coef di Bj a partendo da B-1
 cons=0;
 if(sum(a)~=1)
     cons=0;
