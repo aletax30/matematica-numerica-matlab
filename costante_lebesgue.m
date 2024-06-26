@@ -18,8 +18,9 @@ for ii=1:n+1
     L(ii, :) = Li;
 end
 
+lebesgue_function = sum(abs(L),1);
+
 % Plot della funzione di legesgue nell'intervallo [a,b]
-% lebesgue_function = sum(abs(L),1);
 % plot(xx, lebesgue_function);
 % xlabel('x');
 % ylabel('\Lambda(x)');
