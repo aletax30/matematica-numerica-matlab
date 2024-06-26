@@ -12,7 +12,7 @@ for n = 1:10
     f = @(x) x.^n
     int_exact = integral(f, a, b);
     int_approx = w' * f(x);
-    int_approx - int_exact
+    int_approx - int_exact;
     if abs(int_approx - int_exact) >= 1e-4
         break
     end
