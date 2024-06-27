@@ -1,6 +1,10 @@
 function [th, uh] = heun(f, t_0, t_max, y0, h)
 % [th, uh] = heun(f, t_0, t_max, y0, h)
-% 
+%--- 
+%th(it)=th(it-1)+h;
+%    uh(it)=uh(it-1)+ ...
+%    h/2*(f(th(it-1),uh(it-1)) + f(th(it), uh(it-1)+h*f(th(it-1),uh(it-1))));
+%--- 
 % Metodo di Heun
 % (Heun) : u^(n+1)=u^n+h/2*(f^{n+1} + f(t,u^n+hf^n) )
 %

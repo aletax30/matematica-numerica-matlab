@@ -1,6 +1,11 @@
 function I = simpson_composito(a, b, N, f)
 % I = simpson_composito(a, b, N, f)
-%
+%---
+%I = ( h / 6 ) * ( y( 1 ) + ...
+%        2 * sum( y( 3 : 2 : 2 * N - 1 ) ) + ...
+%        4 * sum( y( 2 : 2 : 2 * N ) ) + ...
+%        y( 2 * N + 1 ) );
+%---
 % Formula di Simpson composita:
 % Input:
 % -> a,b: estremi di integrazione,

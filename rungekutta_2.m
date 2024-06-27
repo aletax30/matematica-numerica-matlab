@@ -1,6 +1,10 @@
 function [t_h,u_h]=rungekutta_2(f,t0,t_max,y_0,h)
 % [t_h, u_h] = rungekutta_2(f, t_max, y_0, h)
-%
+%----
+%u_old = u_h(it - 1);
+%    u_s = u_old + h * f(t_h(it - 1), u_old);
+%    u_h(it) = u_old + 0.5 * h * ( f(t_h(it - 1),u_old) + f(t_h(it), u_s));
+%----
 % Metodo Runge-Kutta 2:
 % u^*_(n+1) = u_n + h * f_n
 % u_(n+1) = u_n + h/2 * (f_n + f(t_(n+1), u^*_(n+1)))
@@ -29,8 +33,6 @@ u_h(1) = y_0;
 
 for it = 2:N_istanti
     u_old = u_h(it - 1);
-    % step intermedio
     u_s = u_old + h * f(t_h(it - 1), u_old);
-    % step finale
     u_h(it) = u_old + 0.5 * h * ( f(t_h(it - 1),u_old) + f(t_h(it), u_s));
 end

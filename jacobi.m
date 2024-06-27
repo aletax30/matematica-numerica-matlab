@@ -1,7 +1,10 @@
 function [xn,iter]=jacobi(A,b,x0,nmax,toll)
+
 % [xn, iter] = jacobi(A, b, x0, nmax, toll)
 %
 % Metodo di Jacobi
+% Componenti: Xi passo k+1 = 1/Aii *(bi- sommatoria(Aij*Xj passo k, j=1:N j!=i)
+% xn(i) = ( b(i) - A(i,[1:i-1,i+1:n])*xv([1:i-1,i+1:n]) )/A(i,i);
 % Input:
 % -> A Matrice del sistema
 % -> b Termine noto (vettore colonna)

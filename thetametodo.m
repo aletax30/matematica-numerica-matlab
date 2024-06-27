@@ -1,6 +1,9 @@
 function [th, uh] = thetametodo(a, b, t_0, t_max, y0, h, theta)
 % [th, uh] = thetametodo(a, b, t_0, t_max, y0, h, theta)
-%
+%-------
+%f_n = a * y_n + b * t_n;f_n = a * y_n + b * t_n;
+%uh(it) = (y_n + h * (1 - theta) * f_n) / (1 - h * theta * a);
+%-------
 % Theta-metodo
 
 th = t_0:h:t_max;  % vettore dei tempi

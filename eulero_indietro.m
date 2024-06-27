@@ -1,9 +1,11 @@
 function [th,uh]=eulero_indietro(a,b,t_0,t_max,y0,h)
 % [th, uh] = eulero_indietro(a, b, t_0, t_max, y0, h)
-%
+%-------
+%uh(:,it) = (uh(:,it-1) + h*b(th(it)))./(1-h*a(th(it)));
+%------
 % Metodo di Eulero Indietro
 % (Eulero Implicito) : u^{n+1}=u^n+h*f^{n+1}.
-%
+% uh(:,it) = (uh(:,it-1) + h*b(th(it)))./(1-h*a(th(it)));
 % Input:
 % -> a,b: function che descrivono il problema di Cauchy
 % (f = ay+b)

@@ -1,6 +1,9 @@
 function I = ptomedio_composito(a, b, N, f)
 % I = ptomedio_composito(a, b, N, f)
-%
+%------
+%x_pme = linspace(a+h/2,b-h/2,N);
+%I=h*(sum(f(x_pme))
+%------
 % Formula del Punto Medio Composita:
 % Input:
 % -> a,b: estremi di integrazione,

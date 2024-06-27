@@ -1,6 +1,8 @@
 function [th,uh]=eulero_avanti(f,t_0,t_max,y0,h)
 % [th, uh] = eulero_avanti(f, t_0, t_max, y0,h)
-%
+%-------
+%uh(:,it) = uh(:,it-1) + h*f(th(it-1),uh(:,it-1));
+%------
 % Metodo di Eulero in Avanti
 % (Eulero Esplicito) : u^(n+1)=u^n+h*f^n
 %

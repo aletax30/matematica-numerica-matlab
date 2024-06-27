@@ -1,6 +1,7 @@
 function [x, k] = richardson(A, b, P, x0, tol, nmax, alpha)
 % [x, k] = richardson(A, b, P, x0, tol, nmax, alpha)
-%
+%z = P \ r;
+%x = x + alpha * z;
 % Metodo di Richardson statico precondizionato
 % Input:
 % -> A: matrice di sistema

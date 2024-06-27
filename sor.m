@@ -3,7 +3,9 @@ function [xn,iter]=sor(A,b,x0,nmax,toll,omega)
 %
 % Metodo SOR
 % Per omega uguale a 1 si ottiene il metodo di Gauss Seidel
-%
+% Componenti:Xi passo k+1 = 1/Aii *[sommat(Aij*Xj passo k+1, j=1:i-1)-sommat(Aij*Xj passo k +bi, j=i+1:n)]
+%xn(i) = (1-omega)*xv(i) + (omega/A(i,i))*...
+%(b(i) - A(i,1:i-1)*xn(1:i-1) - A(i,i+1:n) * xv(i+1:n));
 % Input:
 % -> A Matrice del sistema
 % -> b Termine noto (vettore colonna)

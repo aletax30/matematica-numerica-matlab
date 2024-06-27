@@ -1,6 +1,10 @@
 function I = trapezio_composito(a, b, N, f)
 % I = trapezio_composito(a, b, N, f)
-%
+% ----
+%x = linspace(a, b, N+1); 
+%y = f( x );
+%I = h * ( 0.5 * y( 1 ) + sum( y( 2 : N ) ) + 0.5 * y( N + 1 ) );
+% ----
 % Formula del Trapezio composita:
 % Inputs:
 % -> a,b: estremi di integrazione,
@@ -9,6 +13,6 @@ function I = trapezio_composito(a, b, N, f)
 % Output:
 % -> I: integrale calcolato
 h = ( b - a ) / N;
-x = linspace(a, b, N+1); % vettore dei nodi di integrazione
+x = linspace(a, b, N+1); 
 y = f( x );
 I = h * ( 0.5 * y( 1 ) + sum( y( 2 : N ) ) + 0.5 * y( N + 1 ) );

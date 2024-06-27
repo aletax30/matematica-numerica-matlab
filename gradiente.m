@@ -1,6 +1,7 @@
 function [x, k] = gradiente(A, b, P, x0, tol, nmax)
 % [x, k] = gradiente(A, b, P, x0, tol, nmax)
-%
+%z = P \ r;
+%alpha = (z' * r) / (z' * A * z);
 % Metodo di Richardson dinamico precondizionato
 % con parametro ottimale (metodo del gradiente).
 %
